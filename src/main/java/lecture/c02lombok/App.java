@@ -14,6 +14,7 @@ public class App {
 		log.fatal("치명적 에러용 메시지 출력......");
 		
 		// 경고 단계에 따른 출력 단계를 설정할 수 있음
+		// default는 warn메소드부터 출력됨
 	}
 
 }

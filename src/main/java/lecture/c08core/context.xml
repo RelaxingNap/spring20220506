@@ -6,5 +6,6 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 	<context:component-scan base-package="lecture.c08core"></context:component-scan>
-	<!-- 하위 패키지까지 다 스캔해서 bean을 만들어줌 -->
+	<!-- 기준점이 되는 패키지로부터 하위 패키지까지 다 스캔한 후 
+	     Component어노테이션이 붙은 클래스를 bean으로 만들어줌 -->
 </beans>
