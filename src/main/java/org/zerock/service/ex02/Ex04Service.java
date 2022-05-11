@@ -8,6 +8,7 @@ import org.zerock.mapper.ex02.Ex02Mapper;
 
 @Service
 public class Ex04Service {
+	// 컨트롤러에서 명령한 메소드를 맵퍼로 전달
 	
 	@Autowired
 	private Ex02Mapper mapper;
