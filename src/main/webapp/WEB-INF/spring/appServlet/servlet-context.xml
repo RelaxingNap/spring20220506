@@ -10,6 +10,7 @@
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
+	<!-- presentation 관련 bean 설정 -->
 	<!-- Controller를 통해 특정 메소드가 일을 할 수 있게 해줌 -->
 	<annotation-driven />
 
