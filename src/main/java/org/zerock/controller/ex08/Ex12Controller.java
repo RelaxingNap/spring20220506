@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.zerock.controller.ex03.Employee;
-import org.zerock.service.Ex01Service;
-import org.zerock.service.Ex02Service;
+import org.zerock.service.ex01.Ex01Service;
+import org.zerock.service.ex01.Ex02Service;
 
 @Controller
 @RequestMapping("ex12")

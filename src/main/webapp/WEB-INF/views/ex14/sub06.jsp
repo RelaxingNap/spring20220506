@@ -15,12 +15,14 @@
 <body>
 	<h1>직원 등록</h1>
 	<h1>${message }</h1>
-	<form action="${pageContext.request.contextPath }/ex14/sub06" method="post">
+	<c:url value="/ex14/sub06" var="employeeUrl"></c:url>
+	
+	<form action="${employeeUrl }" method="post">
 		이름 : <input type="text" name="firstName" /> <br />
 		성 : <input type="text" name="lastName"/> <br />
 		생일 : <input type="date" name="birthDate"/> <br /> 
 		사진 : <input type="text" name="photo" /> <br />
-		특이사항 : <input type="text" name="notes" /> <br />
+		특이사항 : <textarea id="" name="notes" cols="30" rows="10"></textarea><br />
 		<input type="submit" value="등록" />
 	</form>
 </body>

@@ -1,4 +1,4 @@
-package org.zerock.service;
+package org.zerock.service.ex01;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

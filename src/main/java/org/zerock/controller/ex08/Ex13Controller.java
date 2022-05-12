@@ -3,7 +3,7 @@ package org.zerock.controller.ex08;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.zerock.service.Ex03Service;
+import org.zerock.service.ex01.Ex03Service;
 
 @Controller
 @RequestMapping("ex13")

@@ -1,5 +1,7 @@
 package org.zerock.service.ex02;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zerock.domain.ex01.CustomerDto;
@@ -39,7 +41,28 @@ public class Ex04Service {
 	}
 	
 	public boolean addEmployee(EmployeeDto employee) {
-		int count = mapper.insertEmployee(employee);
+		int count = mapper.insertEmployee(employee); // insert성공시 table에 영향을 미친 row의 개수만큼 return
 		return count == 1;
+	}
+	
+	public List<EmployeeDto> listEmployee() {
+		return mapper.listEmployee();
+	}
+
+	public List<CustomerDto> listCustomer() {
+		
+		return mapper.listCustomer();
+	}
+
+	public List<CustomerDto> listCustomerPage(int page, int rowPerPage) {
+		
+		int from = (page - 1) * rowPerPage; // query에 어느 row부터 시작하는지 알기 위한 연산
+		
+		return mapper.listCustomerPage(from, rowPerPage);
+	}
+
+	public int countCustomers() {
+		
+		return mapper.countCustomers();
 	}
 }
