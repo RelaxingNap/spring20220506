@@ -16,8 +16,12 @@
   </select> 
   
   <select id="selectBoard" resultType="org.zerock.domain.ex02.BoardDto">
-  	SELECT id, title, body, inserted
-  	FROM Board
+  	SELECT 	b.id, 
+  			b.title, 
+  			b.inserted, 
+  			COUNT(r.id) numOfReply 
+  	FROM Board b LEFT JOIN Reply r ON b.id = r.board_id
+  	GROUP BY b.id
   	ORDER BY id DESC
   </select>
   
@@ -33,4 +37,18 @@
   	    body = #{body}
   	WHERE id = #{id}    
   </update>
+  
+  <delete id="deleteBoard">
+  	DELETE FROM Board
+  	WHERE id = #{id}
+  </delete>
+  
+  <!-- useGeneratedKeys : 새로 생성되는 값을 키값으로 사용가능하게 하는 옵션 -->
+  <!-- keyColumn : DB의 컬럼명 -->
+  <!-- keyProperty : Javabeans의 프로퍼티명 -->
+  <insert id="insertBoard" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+  	INSERT INTO Board (title, body, inserted)
+  	VALUES (#{title}, #{body}, #{inserted})
+  </insert>
+  
 </mapper>
